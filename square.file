@@ -1,0 +1,34 @@
+package com.hcl.kcc;
+import java.util.Scanner;
+public class ConstructsLoops {
+	Scanner scan1 = new Scanner(System.in);
+    public void doWhileSample()
+    {
+    	String reply = "yes";
+    	int num,sqr;
+    	do
+    	{
+    		
+    	
+    		
+    		System.out.println("Enter a Number..");
+    	    num = scan1.nextInt();
+    		if(num>= 100)
+    		{
+    			System.out.println("Sorry The Range is 1-100..");
+    			break;
+    		}
+    			sqr = num * num;
+    			System.out.println("The Square of your Number is "+sqr);
+    			System.out.println("Do You wish to continue yes/no ?");
+    			reply = scan1.next();
+    	}while((reply.contentEquals("yes"))||(reply.contentEquals("YES"))||(reply.contentEquals("Yes")));
+    	System.out.println("You are out of Loop...");
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConstructsLoops cloops = new ConstructsLoops();
+		cloops.doWhileSample();
+		
+	}
+}
